@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--<link rel="stylesheet" href="../static/css/style.css">-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,600,700,800,800i" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="../static/img/deepstacklogo.png">
+    
+  
+    <title>Deepstack Demo</title>
+</head>
+<body>
+    <div class="deep-box"><span><img src="../static/img/deepstacklogo.png" alt="deepstack logo" class="deep-logo"></span>
+    <span class="deep-text">DeepStack</span></div>
+    <!--Body-->
+    <div class="canvas">
+        <!--Main text-->
+        <div class="main-text">
+        <h1><span class="heading-text">Deepstack AI Server</span><br>
+            <span class="body-text">This is an image classification demo showning how
+                deepstack is used for deploying machine learning models both in the cloud and on premise.
+                The model is able to detect eight classes which includes VRHeadset Tablets Smartphones
+                Smartspeaker Smartwatch Laptop headphones and Desktop.</span></h1>
+        </div>
+        <!--/Main text-->
+        <!--Main Image-->
+        <div class="main-image">
+            <img src="../static/img/lake-mountains_1204-507.jpg" alt="Image recognition" class="image-display">
+            <!--form-->
+        <!-- <div class="form-div">
+            <form action="google.com" method="POST">
+                <input type="file">                
+                 <input type="submit">       
+            </form> 
+        </div> -->
+        {% block content %}
+        {% endblock %}
+        <!--/form-->
+        </div>
+        <!--/Main Image-->
+    </div>
+    <!--Footer-->
+  <div class="row px-4">
+    <div class="col-md-7">
+        <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="https://deepquestai.com/"><div class="text-white">DeepquestAI</div> </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://deepstack.cc/"><div class="text-white">DeepStack</div> </a>
+            </li>
+        </ul>      
+    </div>
+    <div class="col-md text-md-right">
+      <small class="text-white p-3">&copy; 2018 DeepquestAI</small>
+    </div> 
+  </div>
+<!--/Footer-->
+    <!--/body-->
+    
+</body>
+</html>

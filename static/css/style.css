@@ -1,0 +1,150 @@
+html{
+    font-size: 1em;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}   
+body{
+    background-color: #012964;
+    color:#FFF1F1;
+    font-family: 'Poppins', sans-serif;
+}
+
+.deep-box{
+    position: absolute;
+    top: 1pt;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.deep-text{
+    display: inline-block;
+    font-weight: 300;
+    margin-left: 8px;
+}
+
+.deep-logo{
+    display: inline-block;
+    height: 20px;
+    position: relative;
+    top: 4px;
+}
+
+.canvas{
+    height: 90vh;
+    background-color: #023682;
+    border-radius: 36px;
+    margin: 5vh;
+    padding: 4%;
+}
+
+.main-text{
+    width: 40%;
+    float: left;
+}
+
+.main-image{
+    width: 40%;
+    float: right;
+}
+
+.image-display{
+    width: 100%;
+}
+
+.heading-text{
+    font-size: 5rem;
+    line-height: 5rem;
+    font-weight: 800;
+}
+.body-text{
+    font-size: 1rem;
+    line-height: .30rem;
+    font-weight: 300;
+}
+
+.form-div{
+    margin-top: 40px;
+    height: 40px;
+}
+
+input[type="file"]{
+    float: left;
+    cursor: pointer;
+}
+
+input[type="submit"]{
+    width: 40%;
+    float: right;
+    height: 40px;
+    border-radius: 50px;
+    border-color: #012964;
+    border: 3px solid #012964;
+    background-color: #0066ff;
+    font-size: 1.4rem;
+    color: #FFF1F1;
+    cursor: pointer;
+}
+
+.retry-button{
+    margin:-10px;
+}
+
+@media screen and (max-width: 780px){
+    .canvas{
+        width: 90%;
+        height: 100%;
+    }
+    .main-text{
+        width: 80%;
+        float: none;
+        margin: 0 10%;
+        justify-content: center;
+    }
+    .main-image{
+        width: 80%;
+        float:none;
+        margin: 0 10%;
+    }
+
+    .canvas::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+}
+
+@media screen and (max-width: 480px){
+
+    .canvas{
+        width: 100%;
+    }
+    .main-text{
+        width: 80%;
+        float: none;
+        margin: 0 10%;
+        justify-content: center;
+    }
+    .heading-text{
+        font-size: 3rem;
+        line-height: 3rem;
+        font-weight: 800;
+    }
+    .body-text{
+        font-size: 1rem;
+        line-height: .30rem;
+        font-weight: 300;
+    }
+    .main-image{
+        width: 80%;
+        float:none;
+        margin: 0 10%;
+    }
+
+    .canvas::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+}

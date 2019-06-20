@@ -1,0 +1,19 @@
+{% extends "index2.html" %}
+{% block content %}
+<form style="display:{{ display_form }};" action="{{url_for('form_submitted')}}" method="POST" enctype='multipart/form-data'>
+    <div class="form-div">
+      <!-- <label for="file.name px-4">Click to upload image</label> -->
+      <input type="file" class="" name="file">
+      <input type="submit" class="" data-toggle="modal" data-target="#exampleModal" value="Get Class">
+    </div>
+</form>
+
+<ul style="display:{{ display_results }};" class="list-group text-primary">
+    <li class="list-group-item" ariamy-file-disabled="true">Prediction Results</li>
+    <li class="list-group-item">class name is {{ class_name }}</li>
+    <li class="list-group-item">Confidence score is {{ confidence_score }}</li>
+  </ul>
+
+  <a href="{{url_for('index')}}" class="nav-link my-4"><button style="display:{{ display_results }};" type="button" class="retry-button">Retry</button></a>
+ 
+{% endblock %}

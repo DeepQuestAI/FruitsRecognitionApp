@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Deepstack Demo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  
+</head>
+<body class="bg-dark">
+  <!--Nav bar-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-info">
+      <a class="navbar-brand text-light px-4 " href="#">DeepQuestAI</a>
+    </nav>
+  <!--/Nav bar-->
+  <!--Jumbotron-->
+  <div class="jumbotron jumbotron-fluid align-center">
+      <div class="row">
+          
+          <div class="container text-center">
+              <h1 class="display-4 text-muted">Deepstack Demo</h1>
+              <p class="lead p-4">A simple image classification demo with DeepStack AI server.</p>
+            </div>
+      </div>
+      <div class="row">
+          <!--Form-->
+          <div class="container p-4 m-auto ">
+              <div class="row m-auto" >
+                  <div class="col"></div>
+                  <div class="col-lg-6">
+                    {% block content %}
+                    {% endblock %}
+                  </div>
+                  <div class="col"></div>
+              </div> 
+            </div>
+            <!--/Form-->
+          </div>
+
+      </div>
+      
+  <!--Jumbotron-->
+
+  <!--Footer-->
+  <div class="row py-3 p-4">
+      <div class="col-md-7">
+          <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link" href="https://deepquestai.com/"><div class="text-white">DeepquestAI</div> </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://deepstack.cc/"><div class="text-white">DeepStack</div> </a>
+              </li>
+          </ul>
+                
+      </div>
+      <div class="col-md text-md-right">
+        <small class="text-white p-3">&copy; 2018 DeepquestAI</small>
+      </div> 
+
+    </div>
+<!--/Footer-->
+</body>
+</html>
