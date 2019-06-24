@@ -1,19 +1,23 @@
-{% extends "index2.html" %}
+{% extends "index.html" %}
 {% block content %}
 <form style="display:{{ display_form }};" action="{{url_for('form_submitted')}}" method="POST" enctype='multipart/form-data'>
     <div class="form-div">
       <!-- <label for="file.name px-4">Click to upload image</label> -->
-      <input type="file" class="" name="file">
-      <input type="submit" class="" data-toggle="modal" data-target="#exampleModal" value="Get Class">
+      <input id="uploadImage" type="file" accept="image/*" name="file">
+        <br><hr>
+        <input id="fullpath" type="text" style="display:none;" name="filefullpath">
+      <input  type="submit"  value="Submit">
     </div>
 </form>
 
 <ul style="display:{{ display_results }};" class="list-group text-primary">
-    <li class="list-group-item" ariamy-file-disabled="true">Prediction Results</li>
-    <li class="list-group-item">class name is {{ class_name }}</li>
-    <li class="list-group-item">Confidence score is {{ confidence_score }}</li>
+    <li class="list-group-item" ariamy-file-disabled="true"> -- Prediction Results --</li>
+    <li class="list-group-item">Object name is <b>{{ class_name }}</b></li>
+    <li class="list-group-item">Confidence score is <b>{{ confidence_score }}</b></li>
   </ul>
+<br> <br>
 
-  <a href="{{url_for('index')}}" class="nav-link my-4"><button style="display:{{ display_results }};" type="button" class="retry-button">Retry</button></a>
+  <a style="display:{{ display_results }};"  href="{{url_for('index')}}" class="nav-link my-4 btn btn-primary btn-lg btn-block"> >>>Retry</a>
+<a style="display:{{ display_results }}; margin-left: 20px;"  href="https://deepstack.cc" target="_blank" class="nav-link my-4 btn btn-light btn-lg btn-block"> >>>Get DeepStack</a>
  
 {% endblock %}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+    <!--<link rel="stylesheet" href="../static/css/style.css">-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400,600,700,800,800i" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="../static/img/deepstacklogo.png">
+    
+  
+    <title>Deepstack Demo</title>
+</head>
+<body>
+    <div class="container marketing">
+
+    <!--Body-->
+    <div class="canvas">
+        <!--Main text-->
+        <div class="main-text">
+        <h2><span class="heading-text" >Deepstack</span><br> <br>
+            <i>Fruits Recognition API Demo</i><br>
+            <hr>
+            <span class="body-text">This is an image classification demo showing how
+                DeepStack can be used to deploy Machine Learning models both in the Cloud and on Premise.
+                The model is able to detect seven classes which includes <span class="body-text-highlight">Apple</span>, <span class="body-text-highlight">Banana</span>, <span class="body-text-highlight">Mango</span>,
+                <span class="body-text-highlight">Orange</span>, <span class="body-text-highlight">Strawberry</span>, <span class="body-text-highlight">Tomato</span>, and <span class="body-text-highlight">Watermelon</span>. </span></h2>
+        </div>
+        <!--/Main text-->
+        <!--Main Image-->
+        <div class="main-image">
+            <img id="trynowpreview" src="{{ preview_image }}" alt="Image recognition" class="image-display">
+
+        {% block content %}
+        {% endblock %}
+        <!--/form-->
+        </div>
+        <!--/Main Image-->
+    </div>
+    <!--Footer-->
+  <div class="row px-4">
+    <div class="col-md-7">
+        <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link"  href="https://deepquestai.com/"><div class="text-primary">DeepQuest AI</div> </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://deepstack.cc/"><div class="text-primary">DeepStack</div> </a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md text-md-right">
+      <small class="text-primary p-3">&copy; 2019 DeepquestAI</small>
+    </div>
+  </div>
+<!--/Footer-->
+    <!--/body-->
+
+    </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="../static/js/actions.js"></script>
+</body>
+</html>

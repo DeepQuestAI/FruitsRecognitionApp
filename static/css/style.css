@@ -7,10 +7,12 @@ html{
     box-sizing: border-box;
 }   
 body{
-    background-color: #012964;
+    background-image: url("../img/fruits.jpg");
+    background-size: cover;
     color:#FFF1F1;
     font-family: 'Poppins', sans-serif;
 }
+
 
 .deep-box{
     position: absolute;
@@ -33,7 +35,8 @@ body{
 
 .canvas{
     height: 90vh;
-    background-color: #023682;
+    background-image: url("../img/transparent-background.png");
+    background-size: cover;
     border-radius: 36px;
     margin: 5vh;
     padding: 4%;
@@ -54,7 +57,7 @@ body{
 }
 
 .heading-text{
-    font-size: 5rem;
+    font-size: 4rem;
     line-height: 5rem;
     font-weight: 800;
 }
@@ -62,6 +65,14 @@ body{
     font-size: 1rem;
     line-height: .30rem;
     font-weight: 300;
+    color: lightgray;
+}
+.body-text-highlight{
+    font-size: 1rem;
+    line-height: .30rem;
+    font-weight: 300;
+    color: white;
+    font-weight: bold;
 }
 
 .form-div{
@@ -87,14 +98,12 @@ input[type="submit"]{
     cursor: pointer;
 }
 
-.retry-button{
-    margin:-10px;
-}
+
 
 @media screen and (max-width: 780px){
     .canvas{
         width: 90%;
-        height: 100%;
+        height: auto;
     }
     .main-text{
         width: 80%;
