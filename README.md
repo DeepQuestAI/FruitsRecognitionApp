@@ -30,7 +30,7 @@ dummy_input = dummy_input.to(device)
 torch.onnx.export(load_saved_model, dummy_input, '<onnx_name>.onnx')
 ```
 
-><em>The model was deployed to deepstack using the code below:<em>
+>The model was deployed to deepstack using the code below:
 
 ```
 #config.json file
@@ -60,7 +60,7 @@ config = open("config.json","rb").read()
 response = requests.post("http://localhost:80/v1/vision/addmodel",
             files={"model":model,"config":config},data={"name":"FruitsDetect"}).json()
 ```
-> <em> Images of an uploaded image and the displayed results</em> 
+> Images of an uploaded image and the displayed results
 ![uploaded fruit image](./Assets/Screenshot2.png)
 ![return class results](./Assets/Screenshot3.png)
 
