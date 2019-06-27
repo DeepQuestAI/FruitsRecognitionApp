@@ -52,7 +52,7 @@ def form_submitted():
             sent_file = request.files['file']
             sent_file_fullpath = request.form["filefullpath"]
 
-            response = requests.post("http://localhost:80/v1/vision/custom/FruitsDetect",
+            response = requests.post("http://localhost:80/v1/vision/custom/FruitsRecognition",
                                                                 files={"image":sent_file}).json()
             response_label = response["label"]
             response_confidence = response["confidence"]
