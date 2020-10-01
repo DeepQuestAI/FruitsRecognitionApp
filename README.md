@@ -21,7 +21,7 @@ ___
 > The deep learing model used in this FruitsRecognitionApp was built on a deep neural network architecture know as ResNet(Residual Neural Networks). Residual neural networks are a special kind of deep neural network architecture that makes use of residual units. Residual unit is made by joining two or three convolution neural networks together and adding the input of the previous convolutional network to the out the next convolutional network. These residual units help to solve the most difficult problems with deep neural networks know as varnishing gradients. Residual neural networks also have there challenges like diminishing feature reuse, but they have to prove to work really well when building a deep learning model. Hence they are used in this project
 ### How FruitsRecognitionApp works
 ___
-> This web app is built on bootstrap, flask and jinja. The web app take the image to be classified send it to the custom model endpoint on DeepStack AI server an resturn a JSON. This JSON value contains the the true label for the image, and the model confidence score which is then displayed by the web app. <br> <em>The model used used for this predictions was built with pytorch as exported to onnx with the code bellow:<em>
+> This web app is built on bootstrap, flask and jinja. The web app take the image to be classified send it to the custom model endpoint on DeepStack AI server an return a JSON. This JSON value contains the true label for the image, and the model confidence score which is then displayed by the web app. <br> <em>The model used used for this predictions was built with pytorch as exported to onnx with the code bellow:<em>
 
 ```
 load_saved_model = torch.load('<model_name>.pt')
